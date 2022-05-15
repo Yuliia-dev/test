@@ -6,8 +6,8 @@ export default function Navigation() {
     <>
       <Nav>
         <Link to="/">CoolDreamShop</Link>
-        <Link to="gallery">GallerYouRest</Link>
-        <Link to="cart">CarToYou</Link>
+        <Link to="gallery">Gallery</Link>
+        <Link to="cart">Cart</Link>
       </Nav>
       <Outlet />
     </>
