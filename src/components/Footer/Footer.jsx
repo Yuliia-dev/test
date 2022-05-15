@@ -1,10 +1,8 @@
-// import { Link } from 'react-router-dom';
 import { FooterWrap, FooterText, FooterLink } from './Footer.styled';
 
 export function Footer() {
   return (
     <FooterWrap>
-      {/* <div> */}
       <FooterText>Made with 💛💙 by Yuliia Melnyk</FooterText>
       <FooterLink
         href="https://github.com/Yuliia-dev"
@@ -14,7 +12,6 @@ export function Footer() {
         {' '}
         My GitHub Link{' '}
       </FooterLink>
-      {/* </div> */}
     </FooterWrap>
   );
 }

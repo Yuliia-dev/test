@@ -6,6 +6,12 @@ export const FooterWrap = styled.footer`
   align-items: center;
   justify-content: space-evenly;
   padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #e9e6e6;
 `;
 
 export const FooterText = styled.p`

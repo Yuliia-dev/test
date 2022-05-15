@@ -11,17 +11,17 @@ export const ContainerBox = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  /* justify-content: center; */
   padding: 20px;
 `;
 
 export const Title = styled.h1`
   padding: 20px;
   max-width: 800px;
+  text-align: justify;
   background-color: #d9e0e2b5;
   color: #000000;
-  font-size: calc(1em + 30px);
-  font-weight: 900;
+  font-size: calc(1em + 26px);
+  font-weight: 600;
 
   --x-offset: -0.0625em;
   --y-offset: 0.0625em;

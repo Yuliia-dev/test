@@ -28,8 +28,8 @@ export const Button = styled.button`
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
-  /* max-width: 60px;
-  max-height: 60px; */
+  max-width: 60px;
+  /* max-height: 60px;  */
   cursor: pointer;
   border-color: #ffcc00;
   &:hover {

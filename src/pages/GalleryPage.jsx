@@ -5,6 +5,7 @@ import GalleryView from '../components/GalleryView/GalleryView';
 import SearchForm from 'components/SearchForm/SearchForm';
 import { Container, Title, DreamList, ContainerError } from './styled';
 import { Footer } from 'components/Footer/Footer';
+import { Filter } from 'components/Filter/Filter';
 
 const newApi = new ApiService();
 
@@ -24,6 +25,7 @@ export function GalleryPage() {
           JSON.parse(localStorage.getItem(keyEntity)) === null
             ? []
             : JSON.parse(localStorage.getItem(keyEntity));
+
         const findSameItems = result.filter(
           item =>
             !itemsInLocalStorage.some(
@@ -48,12 +50,26 @@ export function GalleryPage() {
     );
   };
 
+  const sortHightLowPrice = () => {
+    const sortHightLow = [...items].sort((a, b) => b.price - a.price);
+    setItems(sortHightLow);
+  };
+
+  const sortLowHightPrice = () => {
+    const sortLowHight = [...items].sort((a, b) => a.price - b.price);
+    setItems(sortLowHight);
+  };
+
   return (
     <>
       <Container>
         <Title>Our gallery. Enjoy!</Title>
         {loading && <Loader />}
         <SearchForm value={filter} searchName={searchValueOnList} />
+        <Filter
+          sortHightLowPrice={sortHightLowPrice}
+          sortLowHightPrice={sortLowHightPrice}
+        />
         <DreamList>
           {items &&
             getVisibleItems().map(item => (

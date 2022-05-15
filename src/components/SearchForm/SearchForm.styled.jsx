@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const LabelFilter = styled.label`
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 `;
 export const TextFilter = styled.p`
   width: 200px;
