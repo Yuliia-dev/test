@@ -12,11 +12,20 @@ export const Title = styled.h1`
   margin: 0;
   padding: 10px;
   font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
   line-height: 1.62;
   letter-spacing: 0.06em;
   color: #cd0067;
+  font-size: calc(1em + 20px);
+  font-weight: 900;
+
+  --x-offset: -0.0625em;
+  --y-offset: 0.0625em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: lightblue;
+  &.active {
+    color: #cd0067;
+  }
 `;
 
 export const DreamList = styled.ul`

@@ -4,7 +4,7 @@ import { LabelFilter, TextFilter, InputFilter } from './SearchForm.styled';
 export default function SearchForm({ value, searchName }) {
   return (
     <LabelFilter>
-      <TextFilter>Find dream</TextFilter>
+      <TextFilter>Find your dream</TextFilter>
       <InputFilter
         autoComplete="off"
         placeholder="Enter something ;)"

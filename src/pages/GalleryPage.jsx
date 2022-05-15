@@ -4,41 +4,38 @@ import Loader from 'components/Loader/Loader';
 import GalleryView from '../components/GalleryView/GalleryView';
 import SearchForm from 'components/SearchForm/SearchForm';
 import { Container, Title, DreamList, ContainerError } from './styled';
+import { Footer } from 'components/Footer/Footer';
 
 const newApi = new ApiService();
 
 export function GalleryPage() {
-  const [items, setItem] = useState(null);
+  const [items, setItems] = useState(null);
   const [filter, setFilter] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  // const keyEntity = 'entity';
+  const keyEntity = 'entity';
 
   useEffect(() => {
     setLoading(true);
     newApi
       .fetchItems()
       .then(result => {
-        // const findItemsForDelete = JSON.parse(localStorage.getItem(keyEntity)) === null ? [] : JSON.parse(localStorage.getItem(keyEntity));
-        // const deleteObj = findItemsForDelete.find(item => item.id === id);
+        const itemsInLocalStorage =
+          JSON.parse(localStorage.getItem(keyEntity)) === null
+            ? []
+            : JSON.parse(localStorage.getItem(keyEntity));
+        const findSameItems = result.filter(
+          item =>
+            !itemsInLocalStorage.some(
+              itemForRemove => itemForRemove.id === item.id
+            )
+        );
 
-        // findItemsForDelete?.forEach(element => {
-
-        //   const index = result.indexOf(element);
-        //   console.log(index === -1);
-        //   if (index > -1) {
-        //     result.splice(index, 1);
-        //   }
-        // });
-        // result.splice(0, 1);
-
-        // console.log(result)
-
-        setItem(result);
+        setItems(findSameItems);
       })
       .catch(error => setError(error))
       .finally(setLoading(false));
-  }, [setItem]);
+  }, [setItems]);
 
   const searchValueOnList = event => {
     setFilter(event.target.value);
@@ -69,6 +66,7 @@ export function GalleryPage() {
           Sorry, there was an error, please try again
         </ContainerError>
       )}
+      {items && <Footer />}
     </>
   );
 }

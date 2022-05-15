@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 70px;
+`;
 export const DreamList = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -33,4 +40,34 @@ export const ItemName = styled.p`
   line-height: 1;
   letter-spacing: 0.06em;
   color: #00ccff;
+`;
+
+export const Button = styled.button`
+  border-color: #ffcc00;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 900;
+  cursor: pointer;
+  &:hover {
+    background-color: #ffcc00;
+  }
+`;
+
+export const Title = styled.h1`
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  font-style: normal;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  color: #cd0067;
+  font-size: calc(1em + 20px);
+  font-weight: 900;
+
+  --x-offset: -0.0625em;
+  --y-offset: 0.0625em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: lightblue;
 `;
