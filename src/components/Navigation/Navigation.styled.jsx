@@ -9,15 +9,15 @@ export const Link = styled(NavLink)`
   --x-offset: -0.0625em;
   --y-offset: 0.0625em;
   --stroke: 0.025em;
-  --background-color: white;
-  --stroke-color: lightblue;
+  --background-color: ${props => props.theme.colors.white};
+  --stroke-color: ${props => props.theme.colors.lightblue};
   &.active {
-    color: #cd0067;
+    color: ${props => props.theme.colors.red};
   }
 `;
 
 export const Nav = styled.nav`
-  background-color: #ffcc00;
+  background-color: ${props => props.theme.colors.yellow};
   display: flex;
   justify-content: space-around;
   padding: 20px;

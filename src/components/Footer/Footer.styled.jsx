@@ -11,7 +11,7 @@ export const FooterWrap = styled.footer`
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #e9e6e6;
+  background-color: ${props => props.theme.colors.light};
 `;
 
 export const FooterText = styled.p`
@@ -22,8 +22,8 @@ export const FooterText = styled.p`
   --x-offset: -0.04em;
   --y-offset: 0.04em;
   --stroke: 0.02em;
-  --background-color: white;
-  --stroke-color: lightblue;
+  --background-color: ${props => props.theme.colors.white};
+  --stroke-color: ${props => props.theme.colors.lightblue};
 `;
 
 export const FooterLink = styled.a`
@@ -35,10 +35,10 @@ export const FooterLink = styled.a`
   --x-offset: -0.04em;
   --y-offset: 0.04em;
   --stroke: 0.02em;
-  --background-color: white;
-  --stroke-color: lightblue;
+  --background-color: ${props => props.theme.colors.white};
+  --stroke-color: ${props => props.theme.colors.lightblue};
   color: black;
   &:hover {
-    color: #cd0067;
+    color: ${props => props.theme.colors.red};
   }
 `;

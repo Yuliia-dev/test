@@ -23,7 +23,7 @@ export const Item = styled.li`
   max-width: 300px;
   max-height: 400px;
   list-style: none;
-  background: #ffffff;
+  background: ${props => props.theme.colors.white};
   margin-bottom: 20px;
 `;
 
@@ -39,17 +39,17 @@ export const ItemName = styled.p`
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0.06em;
-  color: #00ccff;
+  color: ${props => props.theme.colors.blue};
 `;
 
 export const Button = styled.button`
-  border-color: #ffcc00;
+  border-color: ${props => props.theme.colors.yellow};
   border-radius: 5px;
   text-decoration: none;
   font-weight: 900;
   cursor: pointer;
   &:hover {
-    background-color: #ffcc00;
+    background-color: ${props => props.theme.colors.yellow};
   }
 `;
 
@@ -61,13 +61,13 @@ export const Title = styled.h1`
   font-style: normal;
   line-height: 1.62;
   letter-spacing: 0.06em;
-  color: #cd0067;
+  color: ${props => props.theme.colors.red};
   font-size: calc(1em + 20px);
   font-weight: 900;
 
   --x-offset: -0.0625em;
   --y-offset: 0.0625em;
   --stroke: 0.025em;
-  --background-color: white;
-  --stroke-color: lightblue;
+  --background-color: ${props => props.theme.colors.white};
+  --stroke-color: ${props => props.theme.colors.lightblue};
 `;

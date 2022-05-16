@@ -7,8 +7,8 @@ export const Title = styled.legend`
   --x-offset: -0.04em;
   --y-offset: 0.04em;
   --stroke: 0.02em;
-  --background-color: white;
-  --stroke-color: lightblue;
+  --background-color: ${props => props.theme.colors.white};
+  --stroke-color: ${props => props.theme.colors.lightblue};
 `;
 
 export const Label = styled.label`
@@ -19,6 +19,6 @@ export const Label = styled.label`
   --x-offset: -0.02em;
   --y-offset: 0.02em;
   --stroke: 0.01em;
-  --background-color: white;
-  --stroke-color: lightblue;
+  --background-color: ${props => props.theme.colors.white};
+  --stroke-color: ${props => props.theme.colors.lightblue};
 `;

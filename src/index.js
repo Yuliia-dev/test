@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-// import {
-//   ApolloClient,
-//   InMemoryCache,
-//   ApolloProvider,
-//   useQuery,
-//   gql,
-// } from '@apollo/client';
+import { ThemeProvider } from 'styled-components';
 import App from 'components/App/App.jsx';
 import './index.css';
+import { theme } from './styles/theme';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename="/test/">
-      <App />
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

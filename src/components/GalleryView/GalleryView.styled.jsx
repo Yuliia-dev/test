@@ -5,7 +5,7 @@ export const Item = styled.li`
   max-width: 300px;
   max-height: 400px;
   list-style: none;
-  background: #ffffff;
+  background: ${props => props.theme.colors.white};
   margin-bottom: 20px;
 `;
 
@@ -21,7 +21,7 @@ export const ItemName = styled.p`
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: #00ccff;
+  color: ${props => props.theme.colors.blue};
 `;
 
 export const Button = styled.button`
@@ -29,11 +29,10 @@ export const Button = styled.button`
   text-decoration: none;
   font-weight: 600;
   max-width: 60px;
-  /* max-height: 60px;  */
   cursor: pointer;
-  border-color: #ffcc00;
+  border-color: ${props => props.theme.colors.yellow};
   &:hover {
-    background-color: #ffcc00;
+    background-color: ${props => props.theme.colors.yellow};
   }
 `;
 
