@@ -3,8 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.main`
   height: 80vh;
   width: 100%;
-  background-image: url('https://cdn.pixabay.com/photo/2020/04/23/16/31/watermelon-5083173_960_720.jpg');
-  background-color: ${props => props.theme.colors.yellow};
+  background: ${props => props.theme.colors.lightRed};
+  background: linear-gradient(
+    72deg,
+    rgba(235, 123, 179, 1) 0%,
+    rgba(226, 230, 148, 0.8911939775910365) 78%
+  );
 `;
 export const ContainerBox = styled.div`
   display: flex;
@@ -22,12 +26,13 @@ export const Title = styled.h1`
   color: ${props => props.theme.colors.black};
   font-size: calc(1em + 26px);
   font-weight: 600;
+  border-radius: 10px;
 
   --x-offset: -0.0625em;
   --y-offset: 0.0625em;
   --stroke: 0.025em;
   --background-color: ${props => props.theme.colors.white};
-  --stroke-color: ${props => props.theme.colors.lightblue};
+  --stroke-color: ${props => props.theme.colors.lightBlue};
 `;
 export const Button = styled.button`
   margin-top: 20px;
@@ -46,7 +51,7 @@ export const Button = styled.button`
   --y-offset: 0.0625em;
   --stroke: 0.025em;
   --background-color: ${props => props.theme.colors.white};
-  --stroke-color: ${props => props.theme.colors.lightblue};
+  --stroke-color: ${props => props.theme.colors.lightBlue};
   background-color: ${props => props.theme.colors.blue};
   &:hover {
     background-color: ${props => props.theme.colors.yellow};

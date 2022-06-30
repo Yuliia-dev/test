@@ -24,7 +24,7 @@ export const Item = styled.li`
   max-height: 400px;
   list-style: none;
   background: ${props => props.theme.colors.white};
-  margin-bottom: 20px;
+  margin: 0 15px 20px 0;
 `;
 
 export const ItemImg = styled.img`
@@ -69,5 +69,5 @@ export const Title = styled.h1`
   --y-offset: 0.0625em;
   --stroke: 0.025em;
   --background-color: ${props => props.theme.colors.white};
-  --stroke-color: ${props => props.theme.colors.lightblue};
+  --stroke-color: ${props => props.theme.colors.lightBlue};
 `;

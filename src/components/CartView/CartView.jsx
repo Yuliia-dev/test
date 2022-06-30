@@ -34,7 +34,7 @@ export default function CartView() {
 
   return (
     <>
-      <Title>This your gallery</Title>
+      <Title>This is your gallery</Title>
       <DreamList>
         {itemsCart.map(({ id, image, title, price }) => (
           <Item key={id}>

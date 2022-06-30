@@ -19,7 +19,7 @@ export const TextFilter = styled.p`
   --y-offset: 0.0625em;
   --stroke: 0.025em;
   --background-color: ${props => props.theme.colors.white};
-  --stroke-color: ${props => props.theme.colors.lightblue};
+  --stroke-color: ${props => props.theme.colors.lightBlue};
   &.active {
     color: ${props => props.theme.colors.red};
   }

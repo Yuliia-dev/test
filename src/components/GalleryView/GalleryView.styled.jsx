@@ -1,12 +1,20 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 70px;
+`;
+
 export const Item = styled.li`
   padding: 5px;
   max-width: 300px;
   max-height: 400px;
   list-style: none;
   background: ${props => props.theme.colors.white};
-  margin-bottom: 20px;
+  margin: 0 15px 20px 0;
 `;
 
 export const ItemImg = styled.img`
@@ -34,12 +42,4 @@ export const Button = styled.button`
   &:hover {
     background-color: ${props => props.theme.colors.yellow};
   }
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
-  width: 100%;
-  min-height: 70px;
 `;

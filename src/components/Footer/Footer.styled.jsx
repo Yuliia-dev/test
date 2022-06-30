@@ -5,12 +5,11 @@ export const FooterWrap = styled.footer`
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
-  padding: 5px;
-  padding-top: 5px;
-  padding-bottom: 15px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  padding: 15px;
+  clear: both;
+  position: relative;
+  max-height: 30px;
+  margin-top: -30px;
   background-color: ${props => props.theme.colors.light};
 `;
 
@@ -18,12 +17,11 @@ export const FooterText = styled.p`
   margin: 0;
   font-size: calc(1em + 5px);
   font-weight: 400;
-
   --x-offset: -0.04em;
   --y-offset: 0.04em;
   --stroke: 0.02em;
   --background-color: ${props => props.theme.colors.white};
-  --stroke-color: ${props => props.theme.colors.lightblue};
+  --stroke-color: ${props => props.theme.colors.lightBlue};
 `;
 
 export const FooterLink = styled.a`
@@ -36,7 +34,7 @@ export const FooterLink = styled.a`
   --y-offset: 0.04em;
   --stroke: 0.02em;
   --background-color: ${props => props.theme.colors.white};
-  --stroke-color: ${props => props.theme.colors.lightblue};
+  --stroke-color: ${props => props.theme.colors.lightBlue};
   color: black;
   &:hover {
     color: ${props => props.theme.colors.red};

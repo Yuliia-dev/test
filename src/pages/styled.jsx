@@ -6,6 +6,7 @@ export const Container = styled.main`
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+  min-height: calc(100vh - 15vh);
 `;
 
 export const Title = styled.h1`
@@ -22,7 +23,7 @@ export const Title = styled.h1`
   --y-offset: 0.0625em;
   --stroke: 0.025em;
   --background-color: ${props => props.theme.colors.white};
-  --stroke-color: ${props => props.theme.colors.lightblue};
+  --stroke-color: ${props => props.theme.colors.lightBlue};
   &.active {
     color: ${props => props.theme.colors.red};
   }
@@ -35,7 +36,6 @@ export const DreamList = styled.ul`
   align-items: center;
   padding: 10px;
   border-radius: 4px;
-  margin: 0;
   padding: 20px 0;
 `;
 export const ContainerError = styled.p`
